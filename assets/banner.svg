@@ -1,0 +1,49 @@
+<svg width="1400" height="470" viewBox="0 0 1400 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">StrideSense</title>
+  <desc id="desc">AI-powered fitness tracking for Android</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.52" stop-color="#10273b"/>
+      <stop offset="1" stop-color="#160d2f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#61f5a1"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkGlow">
+      <stop offset="0" stop-color="#ec4899" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="470" rx="34" fill="url(#background)"/>
+  <circle cx="180" cy="120" r="290" fill="url(#cyanGlow)"/>
+  <circle cx="1240" cy="390" r="330" fill="url(#pinkGlow)"/>
+  <path d="M0 370 C210 305 330 430 555 354 S880 290 1050 360 S1260 430 1400 350" fill="none" stroke="url(#accent)" stroke-opacity=".18" stroke-width="2"/>
+  <g transform="translate(110 94)" filter="url(#softShadow)">
+    <rect width="282" height="282" rx="70" fill="#0c1d2d" stroke="url(#accent)" stroke-width="3"/>
+    <circle cx="141" cy="141" r="91" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-dasharray="480 95" transform="rotate(-32 141 141)"/>
+    <path d="M78 152h39l18-52 30 93 21-57h34" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(470 126)">
+    <text x="0" y="85" fill="#f8fafc" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800" font-size="86" letter-spacing="-3">StrideSense</text>
+    <rect x="2" y="115" width="690" height="7" rx="4" fill="url(#accent)"/>
+    <text x="2" y="182" fill="#b8cad9" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="500" font-size="35">AI-powered fitness tracking for Android</text>
+    <g transform="translate(2 220)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="600">
+      <rect width="171" height="52" rx="26" fill="#17364a" stroke="#22d3ee" stroke-opacity=".55"/>
+      <text x="85.5" y="34" text-anchor="middle" fill="#8eeaff">STEP TRACKING</text>
+      <rect x="190" width="145" height="52" rx="26" fill="#17364a" stroke="#61f5a1" stroke-opacity=".55"/>
+      <text x="262.5" y="34" text-anchor="middle" fill="#9bf9bd">LIVE WALK</text>
+      <rect x="354" width="142" height="52" rx="26" fill="#2d1735" stroke="#ec4899" stroke-opacity=".55"/>
+      <text x="425" y="34" text-anchor="middle" fill="#f3a1ce">AI COACH</text>
+    </g>
+  </g>
+</svg>

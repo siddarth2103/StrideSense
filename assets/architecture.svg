@@ -1,0 +1,57 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">StrideSense system architecture</title>
+  <desc id="desc">Flutter app integrates Android sensors, local storage, Firebase, Cloud Run, and Gemini</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081521"/>
+      <stop offset="1" stop-color="#17102b"/>
+    </linearGradient>
+    <linearGradient id="mobile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#075985"/>
+      <stop offset="1" stop-color="#164e63"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#831843"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#75e7ef"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="620" rx="28" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#f8fafc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">StrideSense System Architecture</text>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="430" y="110" width="340" height="142" rx="24" fill="url(#mobile)" stroke="#44dff0" stroke-width="2"/>
+    <text x="600" y="158" text-anchor="middle" fill="#fff" font-size="29" font-weight="800">Flutter Application</text>
+    <text x="600" y="196" text-anchor="middle" fill="#b8f4fa" font-size="21">UI · activity logic · account scope</text>
+    <text x="600" y="225" text-anchor="middle" fill="#b8f4fa" font-size="21">notifications · Live Walk</text>
+
+    <rect x="70" y="340" width="250" height="150" rx="22" fill="#123047" stroke="#22d3ee" stroke-width="2"/>
+    <text x="195" y="383" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">Android Platform</text>
+    <text x="195" y="420" text-anchor="middle" fill="#baeaf2" font-size="19">TYPE_STEP_COUNTER</text>
+    <text x="195" y="450" text-anchor="middle" fill="#baeaf2" font-size="19">GPS · foreground services</text>
+
+    <rect x="350" y="340" width="250" height="150" rx="22" fill="#16382e" stroke="#61f5a1" stroke-width="2"/>
+    <text x="475" y="383" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">Local Storage</text>
+    <text x="475" y="420" text-anchor="middle" fill="#c4f8d8" font-size="19">Hive</text>
+    <text x="475" y="450" text-anchor="middle" fill="#c4f8d8" font-size="19">SharedPreferences</text>
+
+    <rect x="630" y="340" width="250" height="150" rx="22" fill="#49310d" stroke="#ffca28" stroke-width="2"/>
+    <text x="755" y="383" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">Firebase</text>
+    <text x="755" y="420" text-anchor="middle" fill="#ffe59a" font-size="19">Authentication</text>
+    <text x="755" y="450" text-anchor="middle" fill="#ffe59a" font-size="19">Cloud Firestore</text>
+
+    <rect x="910" y="340" width="220" height="150" rx="22" fill="url(#cloud)" stroke="#ec4899" stroke-width="2"/>
+    <text x="1020" y="383" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">AI Backend</text>
+    <text x="1020" y="420" text-anchor="middle" fill="#f8c4df" font-size="19">Spring Boot · Cloud Run</text>
+    <text x="1020" y="450" text-anchor="middle" fill="#f8c4df" font-size="19">Gemini API</text>
+
+    <path d="M505 252 C400 285 280 285 220 340" fill="none" stroke="#75e7ef" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M560 252 C535 285 500 305 482 340" fill="none" stroke="#75e7ef" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M640 252 C690 285 730 302 747 340" fill="none" stroke="#75e7ef" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M700 252 C820 282 940 295 1000 340" fill="none" stroke="#75e7ef" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <text x="600" y="560" text-anchor="middle" fill="#9fb5c5" font-size="20">Offline-first activity data · authenticated cloud sync · secured AI requests</text>
+  </g>
+</svg>
