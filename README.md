@@ -1,122 +1,114 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="StrideSense — AI-powered fitness tracking" width="100%" />
+  <img src="assets/banner.svg" alt="StrideSense — Android fitness companion" width="100%" />
 
-  <br />
-
-  [![Google Play](https://img.shields.io/badge/Google_Play-Download-34A853?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.siddarth.stridesense)
-  ![Flutter](https://img.shields.io/badge/Flutter-Dart-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-  ![Firebase](https://img.shields.io/badge/Firebase-Cloud_Sync-FFCA28?style=for-the-badge&logo=firebase&logoColor=111)
+  [![Google Play](https://img.shields.io/badge/Google_Play-Try_the_app-34A853?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.siddarth.stridesense)
+  ![Flutter](https://img.shields.io/badge/Flutter-Mobile-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+  ![Kotlin](https://img.shields.io/badge/Kotlin-Native_Android-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
   ![Spring Boot](https://img.shields.io/badge/Spring_Boot-Backend-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 
-  **A production Android fitness companion combining hardware step sensing, GPS walk tracking, cloud synchronization, and AI-powered coaching.**
+  **A shipped Android fitness app. A full-stack engineering project. Built around real mobile constraints.**
+
+  Step tracking · GPS walks · Activity trends · Weekly leaderboards · AI coaching
 </div>
 
-## About StrideSense
+## At a glance
 
-StrideSense is a full-stack fitness application built and launched on Google Play. It turns Android sensor data into a dependable daily activity experience while keeping manual GPS walks, cloud-backed profiles, and AI coaching within one focused product.
+**StrideSense** brings daily activity, walking sessions and fitness guidance into one Flutter application published on Google Play. Native Android integrations handle tracking; local storage preserves activity; a Spring Boot backend supports validated leaderboard publication and Gemini-powered coaching.
 
-The project was designed around real mobile constraints: locked screens, process recreation, device reboots, midnight rollover, delayed sensor callbacks, intermittent connectivity, and multiple account scopes.
+This is the **public product and engineering showcase**. Application and backend source remain private. Built and maintained by [Siddarth Syal](https://github.com/siddarth2103).
 
-## Product highlights
+[Product tour](#product-tour) · [Architecture](#architecture) · [Engineering decisions](#engineering-decisions) · [Google Play](https://play.google.com/store/apps/details?id=com.siddarth.stridesense)
 
-- **Automatic step tracking** using Android's hardware step counter, including locked-screen operation
-- **Live Walk** sessions with GPS distance, current and average speed, duration, and accuracy status
-- **AI Health Coach** with activity-aware, non-medical fitness guidance
-- **Goals and motivation** through streaks, statistics, reminders, and leaderboards
-- **Offline-first storage** with local persistence and secure cloud synchronization
-- **Account isolation** for guest and Google/Firebase profiles
-- **Local-time behavior** for daily rollover, reminders, and AI usage limits
-- **Accessible interface** with light and dark themes
+## Product tour
 
-## Product visuals
+Real app screenshots—not design mockups. Values reflect individual sessions; advertisements and sync-status messages are preserved as captured.
 
-<p align="center">
-  <img src="assets/home-stats-dark.jpeg" alt="StrideSense home statistics in dark mode" width="240" />
-  &nbsp;
-  <img src="assets/trends-dark.jpeg" alt="StrideSense weekly activity trends" width="240" />
-  &nbsp;
-  <img src="assets/health-metrics.jpeg" alt="StrideSense health metrics" width="240" />
-</p>
-
-<p align="center">
-  <img src="assets/home-stats-light.jpeg" alt="StrideSense home statistics in light mode" width="240" />
-  &nbsp;
-  <img src="assets/preferences.jpeg" alt="StrideSense preferences and AI coaching settings" width="240" />
-</p>
+### Daily activity, trends and health tools
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <img src="assets/app-icon.png" alt="StrideSense app icon" width="230" />
-      <br /><strong>Published Android application</strong>
-    </td>
-    <td align="center" width="50%">
-      <img src="assets/ai-assistant.png" alt="StrideSense AI assistant" width="230" />
-      <br /><strong>StrideSense AI Health Coach</strong>
-    </td>
+    <td align="center" width="33%"><img src="assets/home.png" alt="Daily steps, goal progress and tracking options" width="235" /><br /><strong>Daily dashboard</strong><br />Steps, progress and tracking controls</td>
+    <td align="center" width="33%"><img src="assets/trends.png" alt="Weekly step trends and recorded-day statistics" width="235" /><br /><strong>Activity trends</strong><br />Day, week, month and year views</td>
+    <td align="center" width="33%"><img src="assets/health-metrics.png" alt="BMI, BMR, TDEE, protein and water calculators" width="235" /><br /><strong>Health metrics</strong><br />Formula-based fitness estimates</td>
   </tr>
 </table>
 
-<p align="center">
-  <img src="assets/fitness-coach.png" alt="StrideSense fitness coach artwork" width="780" />
-</p>
+### Walking sessions and personal insights
 
-## System architecture
+<table>
+  <tr>
+    <td align="center" width="33%"><img src="assets/activity-live-walk.png" alt="Live Walk entry point and fitness-score breakdown" width="235" /><br /><strong>Live Walk</strong><br />GPS session tracking and activity insights</td>
+    <td align="center" width="33%"><img src="assets/activity-summary.png" alt="Weekly calories, distance, estimated active minutes and summary" width="235" /><br /><strong>Weekly summary</strong><br />Activity across recorded days</td>
+    <td align="center" width="33%"><img src="assets/settings.png" alt="Profile, daily goal and tracking-mode settings" width="235" /><br /><strong>Your preferences</strong><br />Profile, goals and tracking modes</td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="assets/architecture.svg" alt="StrideSense system architecture" width="900" />
-</p>
+### Weekly competition
 
-### Technology stack
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="assets/leaderboard-overview.png" alt="Opt-in weekly leaderboard with participation and sync status" width="270" /><br /><strong>Explicit participation</strong><br />Join or leave, with score-sync feedback</td>
+    <td align="center" width="50%"><img src="assets/leaderboard-rankings.png" alt="Weekly leaderboard podium and ranked participants" width="270" /><br /><strong>Weekly rankings</strong><br />Podium, participant list and personal rank</td>
+  </tr>
+</table>
 
-| Layer | Technologies |
-|---|---|
-| Mobile | Flutter, Dart, Android platform APIs |
-| Activity tracking | `TYPE_STEP_COUNTER`, foreground services, background processing |
-| Walk tracking | Foreground location service, GPS stream processing, Google Maps |
-| Local data | Hive, SharedPreferences |
-| Identity and cloud | Firebase Authentication, Cloud Firestore |
-| Backend | Java, Spring Boot, Google Cloud Run |
-| Intelligence | Gemini API |
-| Engagement | Local notifications, goals, streaks, leaderboards |
-| Monetization | Google AdMob |
+## Architecture
 
-## Engineering challenges
+| Layer | Implementation | Responsibility |
+|---|---|---|
+| Experience | Flutter, Dart | Home, trends, metrics, walks, coaching and settings |
+| Battery Saver | Google Play services `FitnessLocal` Recording API | On-device step recording and day-scoped reads |
+| Real-Time | Kotlin, `SensorManager`, `TYPE_STEP_COUNTER`, health foreground service | Native sensor callbacks and ongoing tracking status |
+| Optional health source | Health Connect | Permission-controlled access to available step records |
+| Processing | Native journal, serialized Dart processing, source reconciliation | Validate readings, retain pending work and avoid overlapping totals |
+| Local data | SharedPreferences, Hive | Tracking checkpoints, pending state and daily history |
+| Identity and cloud | Firebase Authentication, Cloud Firestore | Account identity, cloud records and leaderboard streams |
+| Backend | Java, Spring Boot, Cloud Run, Firebase App Check | Authenticated leaderboard publication and AI request handling |
+| Coaching | Gemini API through the backend | Activity-aware, non-medical fitness guidance |
+| Walks | GPS, Google Maps | User-started walking sessions |
+| Monetization | AdMob with Unity mediation | Integrated ad delivery |
 
-Building a step counter that works in production required more than reading a sensor value. StrideSense handles:
+**Data flow:** selected activity source → validation and reconciliation → local state/history → UI → deferred synchronization.
 
-- Step continuity across app termination, service restart, reboot, and midnight
-- Cross-isolate synchronization and protection from delayed or out-of-order events
-- Monotonic daily totals without artificial step compensation
-- Foreground-service recovery while keeping a single sensor owner
-- GPS noise and stationary-drift filtering without suppressing genuine slow walking
-- Cold-start initialization without exposing data from the wrong account
-- Per-account local and cloud state during sign-in, sign-out, and account switching
-- Android notification, foreground-service, privacy, and release requirements
+In Real-Time mode, native callbacks are durably journaled before Dart processing. Recording API and Health Connect use day-scoped records. Source transitions preserve verified activity without simply adding overlapping raw totals.
 
-## Privacy-conscious design
+## Engineering decisions
 
-- Location access begins only after the user manually starts a Live Walk
-- An ongoing Android notification is shown during active GPS tracking
-- Exact coordinates and route points are not persisted or uploaded
-- Saved walk records contain summary metrics only
-- Health and profile data remain isolated by account scope
-- Users can request account and cloud-data deletion
+- **Capture independently of the UI.** A durable journal separates captured sensor events from Flutter availability; acknowledgement follows processing.
+- **Keep one native sensor owner.** Service lifecycle and source transitions are coordinated rather than spawning competing listeners.
+- **Treat time as part of correctness.** Date, timezone, boot and installation metadata matter. An ambiguous cumulative batch spanning midnight cannot reveal every step's individual timestamp.
+- **Persist before synchronizing.** Checkpoints and daily history support offline use; durable pending publication supports later retries.
+- **Separate membership from scores.** Account-level participation is distinct from Monday-based weekly rankings. Server refresh and personal publication have separate outcomes.
+- **Bound recovery work.** Runtime budgets, backoff, subscription readiness and wake-lock cleanup target unnecessary background processing.
+- **Protect account boundaries.** Owner, installation and source identity are checked before activity is committed or published.
+- **Test lifecycle races.** Regression coverage targets delayed initialization, replay, duplicates, handoffs and stale account/week results.
 
-## Availability
+### Platform boundaries
 
-StrideSense is available on Google Play:
+Android and OEM restrictions can delay or stop background work. Periodic jobs are best-effort, not an exact 15-minute promise. Sensor batching and source latency affect display timing. Distance, calories, active minutes and health calculations are estimates—not medical measurements. Automated regressions complement physical-device verification; they do not guarantee universal reliability.
 
-**https://play.google.com/store/apps/details?id=com.siddarth.stridesense**
+## AI coach & visual identity
 
-## Repository notice
+<table>
+  <tr>
+    <td align="center" width="33%"><img src="assets/app-icon.png" alt="StrideSense app identity" width="220" /><br /><strong>StrideSense</strong></td>
+    <td align="center" width="33%"><img src="assets/ai-assistant.png" alt="StrideSense AI assistant artwork" width="220" /><br /><strong>AI Health Coach</strong></td>
+    <td align="center" width="33%"><img src="assets/fitness-coach.png" alt="StrideSense fitness coach character artwork" width="220" /><br /><strong>Fitness coach</strong></td>
+  </tr>
+</table>
 
-This is a **public product showcase repository** created for portfolio, résumé, and professional-review purposes. It intentionally contains no application source code, backend source code, credentials, service-account files, signing material, or production configuration.
+## What this project demonstrates
 
-The StrideSense implementation is proprietary and remains private.
+End-to-end product delivery: Flutter UI development, Kotlin platform integration, lifecycle-aware background processing, local persistence, Firebase integration, Java/Spring Boot APIs, cloud deployment and production debugging.
+
+The engineering challenge is not just showing a number—it is coordinating sensors, asynchronous processing, storage, identity and synchronization under mobile lifecycle constraints.
+
+## Try StrideSense
+
+[**Download on Google Play →**](https://play.google.com/store/apps/details?id=com.siddarth.stridesense)
+
+This showcase intentionally excludes application source, backend source, credentials, signing material and production configuration. The implementation is proprietary; no open-source license is implied.
 
 ---
 
-<div align="center">
-  Built and shipped by <a href="https://github.com/siddarth2103">Siddarth</a>.
-</div>
+Built and shipped by **[Siddarth Syal](https://github.com/siddarth2103)**.
